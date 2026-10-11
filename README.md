@@ -22,7 +22,7 @@ During the lectures they are live on [show.pan.earth](https://show.pan.earth/).
 - a [GitHub](https://github.com/) account
 - an editor you are comfortable with
 - a browser, [Firefox](https://www.firefox.com/) recommended
-- [Git](https://git-scm.com/)
+- [Git](https://git-scm.com/downloads)
 - [Node.js](https://nodejs.org/), for `npx serve`
 
 Yes, you can use AI. But you are responsible for every line of code you submit,
@@ -60,6 +60,7 @@ commit it and push it.
 - [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status)
 - [What is a URL?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [Git](https://git-scm.com/)
+- [Install Git](https://git-scm.com/downloads)
 - [Pro Git](https://git-scm.com/book/en/v2), the Git book, free to read
 - [GitHub](https://github.com/)
 - [Fork a repository](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo)
