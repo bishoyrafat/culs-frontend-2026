@@ -89,6 +89,8 @@ without JavaScript.
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements)
 - [The button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button)
+- [The image element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img)
+- [Video and audio content](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [The Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 - [Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)
