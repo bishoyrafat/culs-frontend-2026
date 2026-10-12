@@ -18,7 +18,7 @@ During the lectures they are live on [show.pan.earth](https://show.pan.earth/).
 
 ## What you need
 
-- a laptop
+- a very good laptop
 - a [GitHub](https://github.com/) account
 - an editor you are comfortable with
 - a browser, [Firefox](https://www.firefox.com/) recommended
