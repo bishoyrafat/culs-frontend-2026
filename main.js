@@ -20,3 +20,35 @@ const CODES = {
 function getWeather(code) {
   return CODES[code] || ["Unknown", "❔", "cloudy"];
 }
+
+async function fetchJSON(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Request failed (" + res.status + ")");
+  return res.json();
+}
+
+async function searchCity(name) {
+  const data = await fetchJSON(GEO_URL + "?name=" + encodeURIComponent(name) + "&count=1&language=en");
+  if (!data.results || !data.results.length) throw new Error("No city found for \"" + name + "\". Check spelling and try again.");
+  
+  const r = data.results[0];
+  return { lat: r.latitude, lon: r.longitude, label: [r.name, r.admin1, r.country].filter(Boolean).join(", ") };
+}
+
+async function fetchForecast(locationData) {
+  setStatus("Loading forecast…");
+  const params = new URLSearchParams({
+    latitude: locationData.lat, 
+    longitude: locationData.lon, 
+    timezone: "auto", 
+    forecast_days: 7,
+    current: "temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code,is_day",
+    hourly: "temperature_2m,weather_code",
+    daily: "weather_code,temperature_2m_max,temperature_2m_min",
+  });
+  
+  const data = await fetchJSON(FORECAST_URL + "?" + params);
+  render(data, locationData.label);
+  setStatus("");
+  localStorage.setItem("forecast:last", JSON.stringify(locationData));
+}
