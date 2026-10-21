@@ -2,10 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forecast</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  
+<body data-sky="clear-day">
+  <main>
+
+    <form id="search-form" class="search" >
+      <input id="city-input" type="search" placeholder="Search for a city">
+      <button type="submit">Search</button>
+      <button type="button" id="locate-button">Use my location</button>
+    </form>
+
+
+    <p id="status" class="status">Search for a city to see its forecast.</p>
+
+
+    <section id="current" class="current" hidden>
+      <h1 id="current-place" class="current__place"></h1>
+      <p id="current-temp" class="current__temp"></p>
+      <p id="current-summary" class="current__summary"></p>
+      <dl id="current-details" class="details"></dl>
+    </section>
+
+
+    <section id="hourly-section" hidden>
+      <h2 class="section-title">Next 24 hours</h2>
+      <ol id="hourly-list" class="hourly"></ol>
+    </section>
+
+
+    <section id="daily-section" hidden>
+      <h2 class="section-title">7-day forecast</h2>
+      <ul id="daily-list" class="daily"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

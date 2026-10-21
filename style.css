@@ -1,0 +1,248 @@
+/* ===== Page ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background: linear-gradient(170deg, #2f80d1, #8ec5f2);
+  background-attachment: fixed;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+/* ===== Sky themes (the JS sets <body data-sky="...">) ===== */
+
+body[data-sky="clear-day"] {
+  background: linear-gradient(170deg, #2f80d1, #8ec5f2);
+  background-attachment: fixed;
+}
+
+body[data-sky="clear-night"] {
+  background: linear-gradient(170deg, #0b1030, #2c3a7a);
+  background-attachment: fixed;
+}
+
+body[data-sky="cloudy"] {
+  background: linear-gradient(170deg, #4b5563, #9aa5b1);
+  background-attachment: fixed;
+}
+
+body[data-sky="rain"] {
+  background: linear-gradient(170deg, #1f3a4d, #5d7f94);
+  background-attachment: fixed;
+}
+
+body[data-sky="snow"] {
+  background: linear-gradient(170deg, #6c86a3, #dbe6f0);
+  background-attachment: fixed;
+}
+
+body[data-sky="storm"] {
+  background: linear-gradient(170deg, #1c1a2e, #55507a);
+  background-attachment: fixed;
+}
+
+body[data-sky="fog"] {
+  background: linear-gradient(170deg, #6b7480, #c3c8ce);
+  background-attachment: fixed;
+}
+
+/* ===== Search bar ===== */
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search input {
+  flex: 1;
+  min-width: 200px;
+  margin: 0 8px 8px 0;
+}
+
+.search button {
+  margin: 0 8px 8px 0;
+}
+
+input,
+button {
+  font-size: 16px;
+  font-family: inherit;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+input:focus,
+button:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* ===== Status message ===== */
+
+.status {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 20px 0;
+}
+
+/* ===== Current weather ===== */
+
+.current {
+  margin: 32px 0;
+}
+
+.current__place {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.current__temp {
+  font-size: 96px;
+  font-weight: 200;
+  line-height: 1;
+  margin: 8px 0 0 0;
+}
+
+.current__summary {
+  font-size: 20px;
+  margin: 4px 0 20px 0;
+}
+
+/* Feels like / Humidity / Wind tiles */
+
+.details {
+  display: flex;
+  margin: 0;
+}
+
+.details__item {
+  flex: 1;
+  margin-right: 8px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+
+.details__item:last-child {
+  margin-right: 0;
+}
+
+.details__label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.details__value {
+  margin: 2px 0 0 0;
+  font-size: 18px;
+}
+
+/* ===== Section titles ===== */
+
+.section-title {
+  font-size: 16px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 28px 0 10px 0;
+}
+
+/* ===== Hourly forecast ===== */
+
+.hourly {
+  display: flex;
+  overflow-x: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 6px 0;
+}
+
+.hourly__item {
+  flex: 0 0 64px;
+  margin-right: 8px;
+  padding: 10px 4px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+
+.hourly__item span {
+  display: block;
+}
+
+.hourly__time {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ===== Daily forecast ===== */
+
+.daily {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+
+.daily__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.daily__item:last-child {
+  border-bottom: none;
+}
+
+.daily__item span:first-child {
+  flex: 1;
+}
+
+.daily__item span:nth-child(2) {
+  width: 40px;
+  text-align: center;
+}
+
+.daily__temps {
+  width: 80px;
+  text-align: right;
+}
+
+.daily__min {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ===== Small screens ===== */
+
+@media (max-width: 480px) {
+  .current__temp {
+    font-size: 80px;
+  }
+}
